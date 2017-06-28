@@ -12,8 +12,7 @@ class Server:
     def accept_receive_close(self):
         (client_socket, address) = self.sock.accept()
         msg = client_socket.recv(1024)
-        # self.on_msg(msg)
-        print(msg.decode())
+        self.on_msg(msg)
         client_socket.close()
 
 
